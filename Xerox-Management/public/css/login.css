@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Just+Me+Again+Down+Here&family=Madimi+One&family=Metal+Mania&family=Pavanam&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0px;
+    font-family: Arial;
+    border: border-box;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+}
+
+header{
+    position: relative;
+    z-index: 10;
+}
+
+header{
+    position: relative;
+    z-index: 10;
+}
+
+.navbar {
+    height: 55px;
+    background-color: #FFFEFE;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.25);
+    gap: 5px;
+
+}
+
+
+.navbar-name {
+    width: 84px;
+    height:31px;
+    /* margin-left: 700px;
+    margin-top: 6px; */
+}
+
+.navbar-name p {
+    font-size: 50px;
+    font-style: italic;
+    font-family: "Just Me Again Down Here", cursive;;
+    font-weight: 400;
+    position: relative;
+    bottom: 30px;
+}
+
+#pink-header{
+    width: 100%;
+    height: 20px;
+    background-color: #FECDDB;
+}
+
+#second-header{
+    width: 100%;
+    background-color: #FFF5F5;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btw-div{
+    width: 70%;
+    height: 20px;
+    background: rgba(236, 236, 236, 1);
+    border-radius: 10px;
+
+}
+
+.border {
+    border: 1.5px solid transparent;
+    /* border-radius: 8px; */
+}
+/* .border:hover {
+    background-color: cornsilk;
+} */
+.navbar-logo {
+    height: 29px;
+    width: 29px;
+    position: relative;
+    left: 17px;
+    /* margin-top: 8px;
+    margin-left: 4px; */
+}
+
+.logo {
+    background-image: url('../img/swiftly.png');
+    background-size: cover;
+    height: 25px;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.login-div{
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.container {
+    width: 500px;
+    height: 400px;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;   
+    text-align: center;
+    margin-top: 80px; /* Add margin to avoid overlapping the top bar */
+  }
+
+  h1 {
+    font-family: "Comic Sans MS", cursive;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="submit"],
+  input[type="button"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+
+  input[type="submit"] {
+    background: linear-gradient(to right, #007bff, #1b52c8);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  input[type="submit"]:hover {
+    background: linear-gradient(to right, #0056b3, #4b0082);
+  }
+
+  .forgot-password,
+  .create-account {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .forgot-password:hover,
+  .create-account:hover {
+    text-decoration: underline;
+  }
+
+  .remember-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  .remember-me input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+  /* Adding more styling */
+  .container {
+    animation: fade-in 0.5s ease-out forwards;
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+
+
+#login-bg img{
+    height: 60vh;
+    width: auto;
+}
+
+#right-wave{
+    position: absolute;
+    right: 0px;
+    width: 290px;
+    height: 100vh;
+    background-image: url("../rightwave.png");
+    background-size: 290px auto;
+    background-repeat: repeat-y;
+    background-position: bottom left;
+}
+
+#left-wave{
+    position: absolute;
+    left: 0px;
+    width: 290px;
+    height: 100vh;
+    background-image: url("../waves.png");
+    background-size: 290px auto;
+    background-repeat: repeat-y;
+    background-position: bottom left;
+}
+
+
+.sign-container {
+    width: 500px; /* Adjusted width */
+    height: auto;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;   
+    text-align: center;
+    margin-top: 80px; /* Add margin to avoid overlapping the top bar */
+  }

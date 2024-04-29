@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Metal+Mania&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Metal+Mania&family=Pavanam&display=swap');
+
+*{
+    margin: 0px;
+    font-family: Arial;
+    border: border-box;
+}
+
+header{
+    position: relative;
+    z-index: 10;
+}
+
+.navbar {
+    height: 55px;
+    background-color: #FFFEFE;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.25);
+    gap: 5px;
+
+}
+
+
+.navbar-name {
+    width: 84px;
+    height:31px;
+    /* margin-left: 700px;
+    margin-top: 6px; */
+}
+
+.navbar-name p {
+    font-size: 50px;
+    font-style: italic;
+    font-family: "Just Me Again Down Here", cursive;;
+    font-weight: 400;
+    position: relative;
+    bottom: 30px;
+}
+
+#pink-header{
+    width: 100%;
+    height: 20px;
+    background-color: #FECDDB;
+}
+
+#second-header{
+    width: 100%;
+    background-color: #FFF5F5;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btw-div{
+    width: 70%;
+    height: 20px;
+    background: rgba(236, 236, 236, 1);
+    border-radius: 10px;
+
+}
+
+.border {
+    border: 1.5px solid transparent;
+    /* border-radius: 8px; */
+}
+/* .border:hover {
+    background-color: cornsilk;
+} */
+.navbar-logo {
+    height: 29px;
+    width: 29px;
+    position: relative;
+    left: 17px;
+    /* margin-top: 8px;
+    margin-left: 4px; */
+}
+
+.logo {
+    background-image: url('swiftly.png');
+    background-size: cover;
+    height: 25px;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.order-container {
+    border: 1px solid #ff000000;
+    background-color: #D4ECFF;
+}
+.btn-container {
+    /* border: 2px solid red; */
+    margin-top: 14px;
+    text-align: center;
+}
+#ordersBtn {
+    position: relative;
+    top: 20px; 
+}
+
+.btn {
+    margin: auto;
+    font-size: 20px;
+    padding: 5px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: none; */
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(82, 163, 174);
+}
+
+.card-container {
+    display: flex;
+    margin-top: 28px;
+    /* border: 2px solid red; */
+    height: 650px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.box-container {
+    margin-top: 14px;
+    margin-left: 18px;
+    height: 205px;
+    width: 265px;
+    background-color: rgb(146, 146, 159);
+    border-radius: 15px;
+    box-sizing: border-box;
+    background-color: #FFF5F5;
+    box-shadow: 6px 9px 0px 2px rgb(10 77 99);  
+}
+
+.box-content {
+    align-items: center;
+    /* margin-left: 6px; */
+    /* font-family: cursive; */
+}
+
+h2 {
+    margin-top: 2px;
+    margin-left: 55px;
+}
+
+.order-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.user-details {
+    margin-left: auto;
+    padding: auto;
+}
+.user-details, .file-container {
+    width: 48%;
+}
+.box-content p {
+    font-size: 13px;
+    color:rgb(7, 46, 46);
+    font-family: cursive;
+    /* font-weight: bold; */
+}
+.file-image {
+    width: 48px;
+    height: auto;
+}
+
+.file-container {
+    /* border: 1px solid yellow; */
+    height: 111px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+.file-container:hover {
+    background-color: rgb(255, 255, 255);
+}
+.file-container p {
+    margin: 0;
+}
+
+.action-images {
+    margin-top: 4px;
+    margin-left: 20px;
+}
+
+.action-image {
+    display: inline-block; 
+    margin-top: 10px; 
+    cursor: pointer; 
+    width: 26px;
+    height: auto;
+}
+
+.action-image:hover {
+    opacity: 0.7; 
+}
+
+.bottom-right-image {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    width: 40px;
+    height: auto;
+    z-index: 9999;
+}
+

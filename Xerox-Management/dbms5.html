@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swiftly</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Metal+Mania&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Metal+Mania&family=Pavanam&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Anton&family=Just+Me+Again+Down+Here&family=Madimi+One&family=Metal+Mania&family=Pavanam&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+      *{
+        font-family: "Pavanam", sans-serif;
+      }
+
+header{
+    position: relative;
+    z-index: 10;
+}
+
+.navbar {
+    height: 55px;
+    background-color: #FFFEFE;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.25);
+    gap: 5px;
+
+}
+
+
+.navbar-name {
+    width: 84px;
+    height:31px;
+    /* margin-left: 700px;
+    margin-top: 6px; */
+}
+
+.navbar-name p {
+    font-size: 50px;
+    font-style: italic;
+    font-family: "Just Me Again Down Here", cursive;;
+    font-weight: 400;
+    position: relative;
+    bottom: 30px;
+    margin: 0px;
+}
+
+#pink-header{
+    width: 100%;
+    height: 20px;
+    background-color: #FECDDB;
+}
+
+#second-header{
+    width: 100%;
+    background-color: #FFF5F5;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btw-div{
+    width: 70%;
+    height: 20px;
+    background: rgba(236, 236, 236, 1);
+    border-radius: 10px;
+
+}
+
+.border {
+    border: 1.5px solid transparent;
+    /* border-radius: 8px; */
+}
+
+.navbar-logo {
+    height: 29px;
+    width: 29px;
+    position: relative;
+    left: 17px;
+    /* margin-top: 8px;
+    margin-left: 4px; */
+}
+
+.logo {
+    background-image: url('../img/swiftly.png');
+    background-size: cover;
+    height: 25px;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f1f1f1; /* Light background */
+        /* background-image: url("waves.png"),
+          url("rightwave.png"); Add your image URL here */
+        background-repeat: repeat-y; /* Repeat the image horizontally */
+        background-position: bottom left, bottom right; /* Position the image at the top center */
+        background-size: 290px auto;
+        transition: 1s  ;
+      }
+
+      .top-bar {
+        color: black;
+        background-color: white;
+        text-align: center;
+        padding: 10px 0;
+        box-shadow: 0 0 20px rgb(0, 0, 0);
+        font-family: "Indie Flower", cursive; /* Handwritten font */
+        font-size: large;
+      }
+
+      .container {
+        max-width: 800px; /* Limiting container width for better readability */
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+      }
+
+      h1 {
+        text-align: center;
+        padding: 20px;
+        margin: 0;
+        font-size: 30px; /* Larger font size for headings */
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        color: #333; /* Dark text color */
+        font-family: "Madimi One", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+      }
+
+      #searchBar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px; /* Space between search bar and table */
+      }
+
+      #searchBar input[type="text"] {
+        flex: 1;
+        padding: 10px;
+        border: 2px solid #333; /* Dark border */
+        border-radius: 20px; /* Rounded corners */
+        font-size: 16px;
+        outline: none;
+      }
+
+      #searchBar button {
+        padding: 10px 20px;
+        margin-left: 10px;
+        border: none;
+        border-radius: 20px;
+        background-color: #4caf50; /* Green button */
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Smooth hover transition */
+      }
+
+      #searchBar button:hover {
+        background-color: #45a049; /* Darker green on hover */
+      }
+
+      #orderTable {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white; /* White table background */
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Shadow effect */
+      }
+
+      #orderTable th,
+      #orderTable td {
+        border: 1px solid #ddd; /* Light gray border */
+        padding: 8px;
+      }
+
+      #orderTable th {
+        background-color: #f2f2f2; /* Light gray header */
+      }
+
+      .view-document-button {
+        padding: 10px 20px;
+        background-color: #333; /* Dark button color */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Smooth hover transition */
+      }
+
+      .view-document-button:hover {
+        background-color: #555; /* Darker button color on hover */
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <div id="pink-header"></div>
+      <div id="second-header">
+          <div id="btw-div"></div>
+      </div>
+      <div class="navbar">
+          <div class="navbar-name border">
+              <p onclick="window.location.href = '/home'" style="cursor: pointer;">Swiftly</p>
+          </div>
+
+          <div class="navbar-logo border">
+              <div class="logo"></div>
+          </div>
+      </div>
+  </header>
+    
+
+    <div class="container" data-aos="zoom-in">
+      <h1>Customer Order Details</h1>
+      <!-- <div id="searchBar">
+        <input type="text" placeholder="Search by USN"  id="usn-input"/>
+        <button id="submit-btn">Submit</button> 
+      </div> -->
+      <table id="orderTable">
+        <thead>
+          <tr>
+            <th>Order Number</th>
+            <th>Desc</th>
+            <th>Status of the Print</th>
+            <th>Type of File</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="orderContainer">
+          <!-- Order rows will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+
+    AOS.init();
+
+
+      $(document).ready(async() =>{
+        $("#orderTable").hide()
+
+        $("#orderContainer").find("tr").remove();
+          let usn = sessionStorage.getItem("usn")
+          console.log(usn)
+          
+          res = await fetch(`http://127.0.0.1:5000/user/${usn}`)
+          user = await res.json()
+
+          console.log(user.orders)
+
+          for (var orderId of user.orders ){
+            order = {}
+            res = await fetch(`http://127.0.0.1:5000/order/${orderId}`)
+            order = await res.json();
+            
+            file = {}
+
+            if (order.files.length != 0){
+              file_path = order.files[0]
+              res2 = await fetch(`http://127.0.0.1:5000/file/${file_path}`)
+              file = await res2.json();
+            }
+            console.log(orderId, order)
+            addOrder(orderId, order, file)
+          }
+
+          $("#orderTable").show(500)
+        
+      })
+
+      function addOrder(orderId, order, file) {
+
+        const orderContainer = document.getElementById("orderContainer");
+
+        const newRow = orderContainer.insertRow();
+
+        const orderNumberCell = newRow.insertCell(0);
+        orderNumberCell.textContent = `${orderId}`;
+
+        const numberOfCopiesCell = newRow.insertCell(1);
+        numberOfCopiesCell.textContent = file.desc;
+
+        const printStatusCell = newRow.insertCell(2);
+        printStatusCell.textContent = order.order_status;
+
+        const fileTypeCell = newRow.insertCell(3);
+        fileTypeCell.textContent = file.type;
+
+        const actionCell = newRow.insertCell(4);
+        const viewDocumentButton = document.createElement("button");
+        viewDocumentButton.classList.add("view-document-button");
+        viewDocumentButton.textContent = "View Document";
+        actionCell.appendChild(viewDocumentButton);
+
+        viewDocumentButton.addEventListener("click", ()=>{
+          window.open(`http://127.0.0.1:5000/download/${file.file_path}`, target="__blank").focus()
+        })
+      }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiftly</title>
+    <link rel="stylesheet" href="css/user.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div id="pink-header"></div>
+        <div id="second-header">
+            <div id="btw-div"></div>
+        </div>
+        <div class="navbar">
+            <div class="navbar-name border">
+                <p onclick="window.location.href = '/home'" style="cursor: pointer;">Swiftly</p>
+            </div>
+
+            <div class="navbar-logo border">
+                <div class="logo"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="form-section">
+        <div class="form-intro">
+            <h2 data-aos="zoom-in">Good to see you again</h2>
+        </div>
+
+        <div class="form-container" data-aos="zoom-in">
+            <form id="orderForm" >
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name" placeholder="Eg: Alan" required>
+
+                <label for="usn">USN: </label>
+                <input type="text" id="usn" name="usn" placeholder="Eg: 1DT21CS012" required>
+
+                <label for="file">File Upload: </label>
+                <input type="file" id="file" name="file">
+
+                
+
+                <label for="description">Description: </label>
+                <textarea id="description" name="description" placeholder="Give a relevant description....."  cols="36" rows="5"></textarea>
+
+                
+
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+
+            <div id="other-div">
+                <h1 id="order-id"></h1>
+                <p id="order-status"></p>
+            </div>
+
+        </div>
+        <div class="bg-img" data-aos="fade-up">
+            <!-- <div class="bg-img1">
+                <img src="img/img1.png" alt="">
+            </div>
+            <div class="bg-img2">
+            </div>
+            <div class="bg-img3">
+                <img src="img/img3.png" alt="">
+                <img src="img/footer-img.png" alt="" class="footer-img">
+                
+            </div> -->
+        </div>
+
+        
+    </div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+
+AOS.init();
+
+
+$("#other-div").hide()
+$("#orderForm").submit(async function(e){
+    e.preventDefault()
+
+    name = $("#name").val()
+    usn = $("#usn").val()
+
+    formData = new FormData();
+    file = $("#file").prop('files')[0]
+    formData.append("file", file)
+    formData.append('desc', $("#description").val())
+
+    await fetch("http://127.0.0.1:5000/post-user", {  
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json" // Specify the content type as JSON
+    },
+    body: JSON.stringify({  // Stringify the object before sending
+        "name": name,
+        "usn" : usn
+    }),
+    mode: "cors"
+    })
+
+    res = await fetch(`http://127.0.0.1:5000/post-order/${usn}`, {
+        method: "POST"
+    })
+
+    data = await res.json()
+    order_id = data.order_id
+
+    console.log(order_id)
+
+    res = await fetch(`http://127.0.0.1:5000/upload-file/${order_id}`,{
+        method: "POST",
+        body: formData
+    })
+
+    console.log(await res.json())
+    $("#orderForm").hide()
+    $("#order-id").html(`Order Id: ${order_id}`)
+    $("#order-status").html(`Order Status: RECIEVED`)
+    $("#other-div").show()
+})
+
+setInterval()
+
+</script>
+    
+</body>
+</html>

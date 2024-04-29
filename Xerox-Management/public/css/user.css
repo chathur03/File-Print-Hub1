@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Metal+Mania&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Metal+Mania&family=Pavanam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Just+Me+Again+Down+Here&family=Madimi+One&family=Metal+Mania&family=Pavanam&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    margin: 0px;
+    font-family: Arial;
+    border: border-box;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  
+}
+
+body{
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+header{
+    position: relative;
+    z-index: 10;
+}
+
+.navbar {
+    height: 55px;
+    background-color: #FFFEFE;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.25);
+    gap: 5px;
+
+}
+
+
+.navbar-name {
+    width: 84px;
+    height:31px;
+    /* margin-left: 700px;
+    margin-top: 6px; */
+}
+
+.navbar-name p {
+    font-size: 50px;
+    font-style: italic;
+    font-family: "Just Me Again Down Here", cursive;;
+    font-weight: 400;
+    position: relative;
+    bottom: 30px;
+}
+
+#pink-header{
+    width: 100%;
+    height: 20px;
+    background-color: #FECDDB;
+}
+
+#second-header{
+    width: 100%;
+    background-color: #FFF5F5;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btw-div{
+    width: 70%;
+    height: 20px;
+    background: rgba(236, 236, 236, 1);
+    border-radius: 10px;
+
+}
+
+.border {
+    border: 1.5px solid transparent;
+    /* border-radius: 8px; */
+}
+/* .border:hover {
+    background-color: cornsilk;
+} */
+.navbar-logo {
+    height: 29px;
+    width: 29px;
+    position: relative;
+    left: 17px;
+    /* margin-top: 8px;
+    margin-left: 4px; */
+}
+
+.logo {
+    background-image: url('../img/swiftly.png');
+    background-size: cover;
+    height: 25px;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.form-section {
+    background-color: #ECECEC;
+    height:750px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+ .form-intro { 
+    position: relative;
+    top: 30px;
+    /* left: 42%; */
+}
+
+.form-section h2 {
+    /* margin-top: 10px; */
+    /* text-align: center; */
+    font-size: 32px;
+    font-weight: 500;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.form-container {
+    border: 1.5px solid white;
+    background-color: #FFFFFF;
+    width: 600px;
+    height: 422px;
+    position: absolute;
+    top: 100px;
+    left: 31%;
+    border-radius: 18px;
+    z-index: 1; 
+}
+
+#orderForm{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    top: 15px;
+    color: #000000a5;
+    transition: 0.5s;
+}
+
+#orderForm label, input, textarea, button {
+    margin-left: 15px;
+    font-family: cursive; 
+    margin-right: 15px;
+}
+
+#orderForm input, textarea, button {
+    cursor: pointer;
+    border-color: #00000035;
+    border-width: 3px;
+}
+
+#orderForm input{
+    height: 24px;
+}
+
+/* #orderForm input:hover {
+    background-color: rgb(11, 210, 217);
+} */
+
+.btn-submit {
+    border: none;
+    border-radius: 10px;
+    height: 46px;
+    width: 87px;
+    position: relative;
+    left: 40%;
+    background-color: #48adffb9;
+    color: #fff;
+    font-size: 16px;
+    
+}
+
+/* .btn-submit:hover {
+    background-color: blanchedalmond;
+} */
+
+.bg-img {
+    position: absolute;
+    top: 300px;
+    /* border: 1.5px solid red; */
+    height: 450px;
+    width: 100%;
+    display: flex;
+    z-index: -1;
+    background-image: url("/img/waves.svg");
+    background-repeat: repeat-x;
+    background-size: 1597px 350px;
+}
+.bg-img1 {
+    /* border: 1.5px solid black; */
+    width: 33%;
+    /* background-image: url('../img/img1.png'); */
+    background-size: cover;
+    height: 450px;
+    /* z-index: -1; */
+}
+.bg-img2 {
+    /* border: 1.5px solid black; */
+    width: 33%;
+    background-image: url('../img/img2.png');
+    background-size: cover;
+    height: 450px;
+    /* z-index: -1; */
+}
+.bg-img3 {
+    /* border: 1.5px solid black; */
+    width: 33%;
+    /* background-image: url('../img/img3.png'); */
+    background-size: cover;
+    height: 450px;
+    /* z-index: -1; */
+    position: relative;
+}
+
+.footer-img {
+    position: absolute;
+    top: 277px;
+    right: 35px;
+    width: 50px;
+    height: auto;
+    z-index: 1;
+
+}
+
+#other-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90%;
+    transition: 0.5s;
+}
+

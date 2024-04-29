@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiftly</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div id="pink-header"></div>
+        <div id="second-header">
+            <div id="btw-div"></div>
+        </div>
+        <div class="navbar">
+            <div class="navbar-name border">
+                <p>Swiftly</p>
+            </div>
+
+            <div class="navbar-logo border">
+                <div class="logo"></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="login-div">
+        <div id="left-wave" data-aos="fade-right"></div>
+        <div id="right-wave" data-aos="fade-left"></div>
+
+        <div class="sign-container" data-aos="zoom-in">
+            <h1>Sign Up</h1>
+            <form id="signup-form">
+              <input type="text" name="name" placeholder="Name" required /><br />
+              <input type="email" name="email" placeholder="Email" required /><br />
+              <input type="text" name="usn" placeholder="USN" required /><br />
+              <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                required
+              /><br />
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+              /><br />
+              <input type="submit" value="Sign Up" />
+            </form>
+            <a href="#" class="forgot-password">Forgot Password?</a>
+            <a href="/" class="create-account">Already have an account? Log in</a>
+          </div>
+    </section>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init();
+
+function serializeFormToJson(form) {
+  var formData = {};
+  var inputs = form.querySelectorAll('input');
+
+  inputs.forEach(function(input) {
+    formData[input.name] = input.value;
+  });
+
+  return formData;
+}
+
+async function handleFormSubmit(event) {
+  event.preventDefault(); 
+  
+  var form = document.getElementById('signup-form');
+  var formData = serializeFormToJson(form);
+  
+  console.log(formData); 
+
+  await fetch("127.0.0.1:5000/create-acc", {
+    method: 'POST',
+    body: JSON.stringify(formData)
+  })
+
+  window.location.href = "/"
+}
+
+document.getElementById('signup-form').addEventListener('submit', handleFormSubmit);
+
+
+</script>
+
+</body>
+</html>
